@@ -27,6 +27,11 @@ to run an example.
 
 ### List of examples:
 
-`/counter`: a very basic app, demonstrates the use of events and handlers
+#### Counter
+
+`/counter`
+[view app](https://pm102-counter.appspot.com/)
+
+A very basic app, demonstrates the use of events and handlers
 
 ![counter screenshot](resources/counter.png)
