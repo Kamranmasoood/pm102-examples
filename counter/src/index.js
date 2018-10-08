@@ -1,10 +1,10 @@
+import $ from 'jquery'
+
 let counterValue = 0
 
 const changeListener = function () {
-    const view = document.getElementById('counterValue')
-    view.innerText = counterValue
-    const range = document.getElementById('counterRange')
-    range.value = counterValue
+    $('#counter-label').text(counterValue)
+    $('#counter-range').val(counterValue)
 }
 
 const handlers = {
@@ -23,9 +23,20 @@ const handlers = {
     reset: function () {
         counterValue = 0
         changeListener()
+    },
+    setValue: function (e) {
+        counterValue = e.target.value
+        changeListener()
     }
 }
 
-global.App = handlers
+function init() {
+    $('#counter-range').change(handlers.setValue)
+    $('#decrement-button').click(handlers.decrement)
+    $('#reset-button').click(handlers.reset)
+    $('#increment-button').click(handlers.increment)
+}
+
+init()
 
 console.log('app initialized')

@@ -15,18 +15,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
     <div>
         <nav class="lime z-depth-0">
             <div class="brand-logo center">Counter</div>
         </nav>
         <div class="container center-align">
-            <p><div id="counterValue" class="chip">0</div></p>
-            <p><input id="counterRange" type="range" min="-10" max=10></p>
+            <p><div id="counter-label" class="chip">0</div></p>
+            <p><input id="counter-range" type="range" min="-10" max=10></p>
             <div class="column">
-                <button class="lime btn-large waves-effect waves-light" onclick="App.decrement()">decrement</button>
-                <button class="lime btn-large waves-effect waves-light" onclick="App.reset()">reset</button>
-                <button class="lime btn-large waves-effect waves-light" onclick="App.increment()">increment</button>
+                <button id="decrement-button" class="lime btn-large waves-effect waves-light">decrement</button>
+                <button id="reset-button" class="lime btn-large waves-effect waves-light">reset</button>
+                <button id="increment-button" class="lime btn-large waves-effect waves-light">increment</button>
             </div>
         </div>
     </div>

@@ -4,11 +4,12 @@
   "description": "Basic example app for PM102 class.",
   "scripts": {
     "build": "npx webpack --mode production",
-    "start": "npx webpack-dev-server --mode development --open",
+    "start": "npx webpack-dev-server --mode development",
     "deploy": "gcloud app deploy --project `cat project_name`"
   },
   "author": "Michael Jonathan Lee",
   "dependencies": {
+    "jquery": "^3.3.1",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
@@ -17,6 +18,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.1.0",
