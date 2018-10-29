@@ -1,0 +1,52 @@
+{
+  "name": "counter-plain-node",
+  "version": "1.0.0",
+  "description": "Counter app using XMLHttpRequest and plain Node.js.",
+  "scripts": {
+    "start": "./scripts/start.sh",
+    "app": "./scripts/start-app.sh",
+    "backend": "./scripts/start-backend.sh",
+    "deploy": "export PROJECT_NAME=`cat project_name` && cd dist && gcloud app deploy --project $PROJECT_NAME",
+    "test": "npx jest --coverage"
+  },
+  "author": "Michael Jonathan Lee",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "koa": "^2.5.3",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.10",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.4",
+    "css-loader": "^1.0.0",
+    "git-revision-webpack-plugin": "^3.0.3",
+    "html-webpack-plugin": "^3.1.0",
+    "jest": "^23.6.0",
+    "jest-extended": "^0.11.0",
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.18.4",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "jest-extended"
+  }
+}
